@@ -1,12 +1,40 @@
 # Unsupervised Neural Machine Translation from West African Pidgin (Creole) to English
 
-This repository contains the implementation of an Unsupervised NMT model from West African Pidgin (Creole) to English without a single parallel sentence used during training. 
+This repository contains the implementation of an Unsupervised NMT model from West African Pidgin (Creole) to English without using a single parallel sentence during training. 
 
 Key results: 
 
-1. The alignment of Pidgin word vectors with English word vectors which achieves a Nearest Neighbor accuracy of 0.1282.This aligned vector will be helpful in the performance of various downstream tasks and transfer of models from English to Pidgin.
+1. The alignment of Pidgin word vectors with English word vectors which achieves a Nearest Neighbor accuracy of **0.1282**.This aligned vector will be helpful in the performance of various downstream tasks and transfer of models from English to Pidgin.
 
-2. The creation of an Unsupervised Neural Machine Translation model between Pidgin and English which achieves a BLEU score of 20.82 from English to Pidgin and 21.59 from Pidgin to English.
+2. The creation of an Unsupervised Neural Machine Translation model between Pidgin and English which achieves a BLEU score of **20.82** from English to Pidgin and **21.59** from Pidgin to English on a validation set of 41 sentence pairs. 
+
+For our results, at each training step, we performed  the following:
+- Discriminator training 
+- Denoising autoencoder training on each language
+- On-the-fly back translation and reconstruction on sentences (Machine Translation)
+
+We trained for 1 epoch on a V100. 
+
+Below are some translations from our model:
+
+**The Good**
+
+| Source (language ID)| Model Translation | Target (language ID)  |
+| --------------------------------------|:-----------------:| ---------------------:|
+| afta dem cancel dia first attempt (pd)| after they cancelled their first attempt   | after they cancelled their first attempt (en) |
+| they began to thank god for the fish (en)             | dem begin thank god for the fish      |   na im dem thank god for the fish (pd)                 |
+
+**The Bad**
+
+| Source (language ID)| Model Translation | Target (language ID)  |
+| --------------------------------------|:-----------------:| ---------------------:|
+| india space oga yarn say agency don come back kampe . (pd)| india 's space agency said it is coming back to be kampe .   | india space head has said the agency has returned stronger . (en) |
+                                                   
+**The Ugly**
+
+| Source (language ID)| Model Translation | Target (language ID)  |
+| --------------------------------------|:-----------------:| ---------------------:|
+| as fishermen wey dem be dem see the whale . (pd) | as fishermen can be seen as the whale . | given that they are fishermen , they saw the whale . (en) |
 
 ## Dependencies
 
@@ -78,7 +106,7 @@ This work builds extensively on the following works:
 
 3. G. Lample, M. Ott, A. Conneau, L. Denoyer, MA. Ranzato, Phrase-Based & Neural Unsupervised Machine Translation, 2018b. (https://arxiv.org/abs/1804.07755)
 
-Thanks to [Naijalingo.com](naijalingo.com) for perimission to scrape the website to obtain the dictionaries used to align the Pidgin and English word vectors. 
+Thanks to [Naijalingo.com](https://naijalingo.com) for perimission to scrape the website to obtain the dictionaries used to align the Pidgin and English word vectors. 
 
 ## License
 
