@@ -2,6 +2,12 @@
 
 This repository contains the implementation of an Unsupervised NMT model from West African Pidgin (Creole) to English without a single parallel sentence used during training. 
 
+Key results: 
+
+1. The alignment of Pidgin word vectors with English word vectors which achieves a Nearest Neighbor accuracy of 0.1282.This aligned vector will be helpful in the performance of various downstream tasks and transfer of models from English to Pidgin.
+
+2. The creation of an Unsupervised Neural Machine Translation model between Pidgin and English which achieves a BLEU score of 20.82 from English to Pidgin and 21.59 from Pidgin to English.
+
 ## Dependencies
 
 * Python 3
@@ -71,6 +77,8 @@ This work builds extensively on the following works:
 2. G. Lample, A. Conneau, L. Denoyer, MA. Ranzato, Unsupervised Machine Translation With Monolingual Data Only, 2018a. (https://arxiv.org/abs/1711.00043)
 
 3. G. Lample, M. Ott, A. Conneau, L. Denoyer, MA. Ranzato, Phrase-Based & Neural Unsupervised Machine Translation, 2018b. (https://arxiv.org/abs/1804.07755)
+
+Thanks to [Naijalingo.com](naijalingo.com) for perimission to scrape the website to obtain the dictionaries used to align the Pidgin and English word vectors. 
 
 ## License
 
