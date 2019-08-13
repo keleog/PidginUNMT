@@ -1,6 +1,6 @@
 # Unsupervised Neural Machine Translation from West African Pidgin (Creole) to English
 
-This repository contains the implementation of the Unsupervised NMT model from West African Pidgin (Creole) to English by **1. Kelechi Ogueji** and **2. Orevaoghene Ahia.**
+This repository contains the implementation of an Unsupervised NMT model from West African Pidgin (Creole) to English without a single parallel sentence used during training. 
 
 ## Dependencies
 
