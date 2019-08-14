@@ -13,7 +13,7 @@ For our results, at each training step, we performed  the following:
 - Denoising autoencoder training on each language
 - On-the-fly back translation and reconstruction on sentences (Machine Translation)
 
-We trained for 1 epoch on a V100. 
+We trained for 1 epoch on a V100 (approx. 9 hours) and achieved the best result on the validation set, as subsequent epochs did not perform better.  
 
 Below are some translations from our model:
 
@@ -111,3 +111,8 @@ Thanks to [Naijalingo.com](https://naijalingo.com) for perimission to scrape the
 ## License
 
 See the [LICENSE](LICENSE) file for more details.
+
+## To-DO:
+
+- Inference script
+
