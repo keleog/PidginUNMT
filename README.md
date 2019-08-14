@@ -9,11 +9,11 @@ Key results:
 2. The creation of an Unsupervised Neural Machine Translation model between Pidgin and English which achieves a BLEU score of **20.82** from English to Pidgin and **21.59** from Pidgin to English on a validation set of 41 sentence pairs. 
 
 For our results, at each training step, we performed  the following:
-- Discriminator training 
-- Denoising autoencoder training on each language
-- On-the-fly back translation and reconstruction on sentences (Machine Translation)
+- Discriminator training to constrain encoder to map both languages to the same latent space
+- Denoising autoencoder training on each language which acts as language model training
+- On-the-fly back translation and reconstruction on sentences which acts as translation training
 
-We trained for 1 epoch on a V100 (approx. 9 hours) and achieved the best result on the validation set, as subsequent epochs did not perform better.  
+We trained for 1 epoch on a V100 (approx. 9 hours) and achieved the best result on the validation set, as results from subsequent epochs were slightly below this.  
 
 Below are some translations from our model:
 
@@ -83,7 +83,8 @@ Please note that some parameters must respect a particular format:
 **Other parameters:**
 - `--otf_num_processes 30` indicates that 30 CPU threads will be generating back-translation data on the fly, using the current model parameters
 - `--otf_sync_params_every 1000` indicates that models on CPU threads will be synchronized every 1000 training steps
-- `--lambda_xe_otfd 1` means that the coefficient associated to the back-translation loss is fixed to a constant of 1
+- `--lambda_xe_otfd 1` means that the coefficient associated with the back-translation loss is fixed to a constant of 1
+- `--lambda_dis 1` means that the coefficient associated with the discriminator is fixed to a constant of 1
 - `--lambda_xe_mono '0:1,100000:0.1,300000:0'` means that the coefficient associated to the denoising auto-encoder loss is initially set to 1, will linearly decrease to 0.1 over the first 100000 steps, then to 0 over the following 200000 steps, and will finally be equal to 0 during the remaining of the experiment (i.e. we train with back-translation only)
 
 Given binarized monolingual training data, parallel evaluation data, and pretrained cross-lingual embeddings, you can train the model using the following command:
