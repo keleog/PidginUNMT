@@ -4,7 +4,7 @@ This repository contains the implementation of an Unsupervised NMT model from We
 
 Key results: 
 
-1. The alignment of Pidgin word vectors with English word vectors which achieves a Nearest Neighbor accuracy of **0.1282**.This aligned vector will be helpful in the performance of various downstream tasks and transfer of models from English to Pidgin.
+1. The alignment of Pidgin word vectors with English word vectors which achieves a Nearest Neighbor accuracy of **0.1282**. This aligned vector will be helpful in the performance of various downstream tasks and transfer of models from English to Pidgin.
 
 2. The creation of an Unsupervised Neural Machine Translation model between Pidgin and English which achieves a BLEU score of **20.82** from English to Pidgin and **21.59** from Pidgin to English on a validation set of 41 sentence pairs. 
 
@@ -57,6 +57,9 @@ preprocess.ipynb notebook. This notebook helps convert your text file data to se
 Note that although this repository supports the use of BPE codes, all work was done with regular word vectors. 
 
 ### Train the NMT model
+
+First, you need to clone the [moses decoder repository](https://github.com/moses-smt/mosesdecoder) into the tools directory. 
+
 Please note that some parameters must respect a particular format:
 - **langs**
     + A list of languages, sorted by language ID.
@@ -113,7 +116,7 @@ Thanks to [Naijalingo.com](https://naijalingo.com) for perimission to scrape the
 
 See the [LICENSE](LICENSE) file for more details.
 
-## To-DO:
+## Ongoing:
 
 - Inference script
 

@@ -16,7 +16,8 @@ from .utils import restore_segmentation
 logger = getLogger()
 
 
-TOOLS_PATH = '/home/ec2-user/SageMaker/UnsupervisedMT/tools'
+
+TOOLS_PATH = '../tools'
 BLEU_SCRIPT_PATH = os.path.join(TOOLS_PATH, 'mosesdecoder/scripts/generic/multi-bleu.perl')
 assert os.path.isfile(BLEU_SCRIPT_PATH), "Moses not found. Please be sure you downloaded Moses in %s" % TOOLS_PATH
 
