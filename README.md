@@ -48,7 +48,7 @@ Below are some translations from our model:
 | 10. they have praised the mission that they arranged it . (en)| dem dey praised the mission say make dem arranged it . | dem don hail di mission say na dem package am . (pd) |
 
 
-As we can see, the language model helps the model perform translations that are not necessarily word-for-word, but also grammatically correct as in translations 2, 3 and 7. The model also corrects translations eg. adding possession as in translations 5.  
+As we can see, the language model helps the model perform translations that are not necessarily word-for-word, but also grammatically correct as in translations 2 and 3. The model also corrects translations eg. adding possession as in translations 5.  
 
 ## Dependencies
 
