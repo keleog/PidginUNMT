@@ -1,4 +1,4 @@
-# Unsupervised Neural Machine Translation from West African Pidgin (Creole) to English
+# Unsupervised Neural Machine Translation from West African Pidgin (Creole) to English 
 
 This repository contains the implementation of an Unsupervised NMT model from West African Pidgin (Creole) to English without using a single parallel sentence during training. 
 
@@ -6,14 +6,18 @@ Key results:
 
 1. The alignment of Pidgin word vectors with English word vectors which achieves a Nearest Neighbor accuracy of **0.1282**. This aligned vector will be helpful in the performance of various downstream tasks and transfer of models from English to Pidgin.
 
-2. The creation of an Unsupervised Neural Machine Translation model between Pidgin and English which achieves a BLEU score of **20.82** from English to Pidgin and **21.59** from Pidgin to English on a validation set of 41 sentence pairs. 
+2. The creation of an Unsupervised Neural Machine Translation model between Pidgin and English which achieves a BLEU score of **20.82** from English to Pidgin and **21.59** from Pidgin to English on a test set of 41 sentence pairs. 
 
 For our results, at each training step, we performed  the following:
 - Discriminator training to constrain encoder to map both languages to the same latent space
 - Denoising autoencoder training on each language which acts as language model training
 - On-the-fly back translation and reconstruction on sentences which acts as translation training
 
-We trained for 1 epoch on a V100 (approx. 9 hours) and achieved the best result on the validation set, as results from subsequent epochs were slightly below this.  
+Below is the algorithm for our training process:
+
+![Algorithm](./PidginUNMT.png)
+
+We trained for 8 epochs on a V100 (approx. 3 days) and selected the best model from evaluating on our test dataset. 
 
 Below are some translations from our model:
 
@@ -21,20 +25,30 @@ Below are some translations from our model:
 
 | Source (language ID)| Model Translation | Target (language ID)  |
 | --------------------------------------|:-----------------:| ---------------------:|
-| afta dem cancel dia first attempt (pd)| after they cancelled their first attempt   | after they cancelled their first attempt (en) |
-| they began to thank god for the fish (en)             | dem begin thank god for the fish      |   na im dem thank god for the fish (pd)                 |
+| 1. afta dem cancel dia first attempt (pd)| after they cancelled their first attempt   | after they cancelled their first attempt (en) |
+| 2. they began to thank god for the fish (en)             | dem begin thank god for the fish      |   na im dem thank god for the fish (pd)                 |
+| 3. this is not the first time job has come to africa to do crusade . (en)| dis na no be di first time wey job don come africa to do am for crusade . | dis no be di first time job don come africa to do crusade . (pd) |
+| 4. the spacecraft entered earth orbit . (en) | di spacecraft enta earth orbit .   | di spacecraft enta earth orbit . (pd) |
+| 5. di spacecraft enta earth orbit (pd)| a spacecraft into earth 's orbit .  | the spacecraft entered earth orbit (en) |
+| 6. with dis list of ministers e sure for us say we go knack dem results (pd)| with this list of ministers we were confident we will knack results .  |with this list of ministers we are confident that we will provide those results . |
 
 **The Bad**
 
 | Source (language ID)| Model Translation | Target (language ID)  |
 | --------------------------------------|:-----------------:| ---------------------:|
-| india space oga yarn say agency don come back kampe . (pd)| india 's space agency said it is coming back to be kampe .   | india space head has said the agency has returned stronger . (en) |
+| 6. india space oga yarn say agency don come back kampe . (pd)| india 's space agency said it is coming back to be kampe .   | india space head has said the agency has returned stronger . (en) |
+| 7. since when michael job arrived kenya he has become very popular . (en) | since when michael get job for kenya he don become very popular . | since wey michael job land kenya im don popular well well . (pd) |
+| 8. di woman wey dey learn gymnastics just start dey waka with bristol student . (pd)| the woman 's gymnastics learn just to start walking with bristol student . | the woman that learned gymnastics just started to walk with bristol student . (en) |
                                                    
 **The Ugly**
 
 | Source (language ID)| Model Translation | Target (language ID)  |
 | --------------------------------------|:-----------------:| ---------------------:|
-| as fishermen wey dem be dem see the whale . (pd) | as fishermen can be seen as the whale . | given that they are fishermen , they saw the whale . (en) |
+| 9. as fishermen wey dem be dem see the whale . (pd) | as fishermen can be seen as the whale . | given that they are fishermen , they saw the whale . (en) |
+| 10. they have praised the mission that they arranged it . (en)| dem dey praised the mission say make dem arranged it . | dem don hail di mission say na dem package am . (pd) |
+
+
+As we can see, the language model helps the model perform translations that are not necessarily word-for-word, but also grammatically correct as in translations 2, 3 and 7. The model also corrects translations eg. adding possession as in translations 5.  
 
 ## Dependencies
 
@@ -119,4 +133,5 @@ See the [LICENSE](LICENSE) file for more details.
 ## Ongoing:
 
 - Inference script
+- provision of corpus, saved models and aligned word vectors
 

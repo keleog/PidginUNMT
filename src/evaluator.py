@@ -83,7 +83,7 @@ class EvaluatorMT(object):
         params = self.params
         params.ref_paths = {}
 
-        for (lang1, lang2), v in self.data['para'].items():
+        for (lang1, lang2), _ in self.data['para'].items():
 
             assert lang1 < lang2
             lang1_id = params.lang2id[lang1]
