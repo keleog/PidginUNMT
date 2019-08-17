@@ -36,19 +36,19 @@ Below are some translations from our model:
 
 | Source (language ID)| Model Translation | Target (language ID)  |
 | --------------------------------------|:-----------------:| ---------------------:|
-| 6. india space oga yarn say agency don come back kampe . (pd)| india 's space agency said it is coming back to be kampe .   | india space head has said the agency has returned stronger . (en) |
-| 7. since when michael job arrived kenya he has become very popular . (en) | since when michael get job for kenya he don become very popular . | since wey michael job land kenya im don popular well well . (pd) |
-| 8. di woman wey dey learn gymnastics just start dey waka with bristol student . (pd)| the woman 's gymnastics learn just to start walking with bristol student . | the woman that learned gymnastics just started to walk with bristol student . (en) |
+| 7. india space oga yarn say agency don come back kampe . (pd)| india 's space agency said it is coming back to be kampe .   | india space head has said the agency has returned stronger . (en) |
+| 8. since when michael job arrived kenya he has become very popular . (en) | since when michael get job for kenya he don become very popular . | since wey michael job land kenya im don popular well well . (pd) |
+| 9. di woman wey dey learn gymnastics just start dey waka with bristol student . (pd)| the woman 's gymnastics learn just to start walking with bristol student . | the woman that learned gymnastics just started to walk with bristol student . (en) |
                                                    
 **The Ugly**
 
 | Source (language ID)| Model Translation | Target (language ID)  |
 | --------------------------------------|:-----------------:| ---------------------:|
-| 9. as fishermen wey dem be dem see the whale . (pd) | as fishermen can be seen as the whale . | given that they are fishermen , they saw the whale . (en) |
-| 10. they have praised the mission that they arranged it . (en)| dem dey praised the mission say make dem arranged it . | dem don hail di mission say na dem package am . (pd) |
+| 10. as fishermen wey dem be dem see the whale . (pd) | as fishermen can be seen as the whale . | given that they are fishermen , they saw the whale . (en) |
+| 11. they have praised the mission that they arranged it . (en)| dem dey praised the mission say make dem arranged it . | dem don hail di mission say na dem package am . (pd) |
 
 
-As we can see, the language model helps the model perform translations that are not necessarily word-for-word, but also grammatically correct as in translations 2 and 3. The model also corrects translations eg. adding possession as in translations 5.  
+As we can see, the language model helps with performing translations that are not necessarily word-for-word, but also grammatically correct as in translations 2 and 3. The model also corrects translations eg. changing to possessive forms as in translation 5.  
 
 ## Dependencies
 
