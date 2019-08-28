@@ -62,7 +62,9 @@ As we can see, the language model helps with performing translations that are no
 ## Running Unsupervised NMT
 
 ### Aligning Word Vectors
-Check the Alignment Folder and run the notebook to align and evaluate the Pidgin Word Vectors to the English Word Vectors. 
+Check the Alignment Folder and run the notebook to align and evaluate the Pidgin Word Vectors to the English Word Vectors.
+
+You can check the pretrained folder for already aligned pidgin word vectors. 
 
 ### Preprocess data
 The first thing to do to run the NMT model is to preprocess data. To do so, just follow the instructions in the 
@@ -133,5 +135,4 @@ See the [LICENSE](LICENSE) file for more details.
 ## Ongoing:
 
 - Inference script
-- provision of corpus, saved models and aligned word vectors
-
+- provision of pidgin corpus
