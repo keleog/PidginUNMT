@@ -128,7 +128,7 @@ This work builds extensively on the following works:
 
 Thanks to [Naijalingo.com](https://naijalingo.com) for perimission to scrape the website to obtain the dictionaries used to align the Pidgin and English word vectors. 
 
-Thanks to [https://deepquestai.com/] (https://deepquestai.com/) and AI Saturdays Lagos for computation support
+Thanks to [deepquestai.com](https://deepquestai.com/) and AI Saturdays Lagos for computation support
 
 ## License
 
