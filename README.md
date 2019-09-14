@@ -137,4 +137,3 @@ See the [LICENSE](LICENSE) file for more details.
 ## Ongoing:
 
 - Inference script
-- provision of pidgin corpus
