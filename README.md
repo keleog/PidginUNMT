@@ -116,7 +116,7 @@ Although some of these parameters are already specified in the [main.py](./main.
 
 ## Acknlowledgments and References
 
-Special thanks to my amazing colleagues at [Instadeep](https://www.instadeep.com/) for constant support and constructive feedback. 
+Special thanks to my amazing colleagues at [Instadeep](https://www.instadeep.com/) for constant support and constructive feedback throughout the project. 
 
 This repository borrowed extensively from these repositories - https://github.com/facebookresearch/UnsupervisedMT and https://github.com/facebookresearch/fastText/tree/master/alignment
 
