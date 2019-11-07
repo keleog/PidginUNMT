@@ -6,7 +6,7 @@ Key results:
 
 1. The alignment of Pidgin word vectors with English word vectors which achieves a Nearest Neighbor accuracy of **0.1282**. Significantly better than a baseline of **0.0093** which is the probability of selecting the right nearest neighbor from the evaluation set of 108 pairs. This aligned vector will be helpful in the performance of various downstream tasks and transfer of models from English to Pidgin. 
 
-2. The creation of an Unsupervised Neural Machine Translation model between Pidgin and English which achieves a BLEU score of **7.93** from Pidgin to English and **5.18** from English to Pidgin on a test set of 2101 sentence pairs. Test set was obtained from the JW300 dataset and preprocessed by the [Masakhane](https://www.masakhane.io/) group [here](https://github.com/masakhane-io/masakhane/tree/master/jw300_utils/test)
+2. The creation of an Unsupervised Neural Machine Translation model between Pidgin and English which achieves a BLEU score of **7.93** from Pidgin to English and **5.18** from English to Pidgin on a test set of 2101 sentence pairs. Test set was obtained from the JW300 dataset [4] and preprocessed by the [Masakhane](https://www.masakhane.io/) group [here](https://github.com/masakhane-io/masakhane/tree/master/jw300_utils/test)
 
 For our results, at each training step, we performed  the following:
 - Discriminator training to constrain encoder to map both languages to the same latent space
@@ -127,6 +127,10 @@ This work builds extensively on the following works:
 2. G. Lample, A. Conneau, L. Denoyer, MA. Ranzato, Unsupervised Machine Translation With Monolingual Data Only, 2018a. (https://arxiv.org/abs/1711.00043)
 
 3. G. Lample, M. Ott, A. Conneau, L. Denoyer, MA. Ranzato, Phrase-Based & Neural Unsupervised Machine Translation, 2018b. (https://arxiv.org/abs/1804.07755)
+
+4. Željko Agić, Ivan Vulić: "JW300: A Wide-Coverage Parallel Corpus for Low-Resource Languages", In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (ACL), 2019. 
+
+5. J. Tiedemann: "Parallel Data, Tools and Interfaces in OPUS." In Proceedings of the 8th International Conference on Language Resources and Evaluation, 2012.
 
 Thanks to [Naijalingo.com](https://naijalingo.com) for perimission to scrape the website to obtain the dictionaries used to align the Pidgin and English word vectors. 
 
