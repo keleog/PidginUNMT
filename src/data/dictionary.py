@@ -143,11 +143,9 @@ class Dictionary(object):
         unk_words = {}
 
         # index sentences
-        f = open(path, 'r', encoding='utf-8').read()
-        f = f.lower()
-        f = f.replace(',',' ').replace('.',' .')
-        s = tokenize.sent_tokenize(f)
-        for sent in s:
+        sentences = list(open(path, 'r', encoding='utf-8'))
+        for sent in sentences:
+            sent = sent.lower()
             if len(sent) == 0:
                 print("Empty sentence found")
             count_unk = 0
