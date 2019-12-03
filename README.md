@@ -19,7 +19,7 @@ Below is the algorithm for our training process:
 
 We trained for 8 epochs on a V100 (approx. 3 days) and selected the best model from evaluating on our test dataset. 
 
-Below are some translations from our model:
+Below are some translations by our model:
 
 **The Good**
 
@@ -30,25 +30,32 @@ Below are some translations from our model:
 | 3. this is not the first time job has come to africa to do crusade . (en)| dis na no be di first time wey job don come africa to do am for crusade . | dis no be di first time job don come africa to do crusade . (pd) |
 | 4. the spacecraft entered earth orbit . (en) | di spacecraft enta earth orbit .   | di spacecraft enta earth orbit . (pd) |
 | 5. di spacecraft enta earth orbit (pd)| a spacecraft into earth 's orbit .  | the spacecraft entered earth orbit (en) |
-| 6. with dis list of ministers e sure for us say we go knack dem results (pd)| with this list of ministers we were confident we will knack results .  |with this list of ministers we are confident that we will provide those results . |
+| 6. with dis list of ministers e sure for us say we go knack dem results (pd)| with this list of ministers we were confident we will knack results .  |with this list of ministers we are confident that we will provide those results . (en) |
+| 7. dem dey really make us strong . (pd)| he 's really made us strong . |they are a real source of encouragement . (en)|
+| 8. wetin we fit do to get better result when we dey preach for open place ? (pd)| what could we do to get better result when we preach in open place ? |how can public witnessing prove to be effective ? (en) |
+| 9. what are most people today not aware of ? (en)| wetin many people today no know ? |wetin most people are today no dey aware of (pd) |
+| 10. one student began coming to the kingdom hall . (en)| one of my student come start to come kingdom hall . |one student wey begin dey come di kingdom hall . (pd) |
+
 
 **The Bad**
 
 | Source (language ID)| Model Translation | Target (language ID)  |
 | --------------------------------------|:-----------------:| ---------------------:|
-| 7. india space oga yarn say agency don come back kampe . (pd)| india 's space agency said it is coming back to be kampe .   | india space head has said the agency has returned stronger . (en) |
-| 8. since when michael job arrived kenya he has become very popular . (en) | since when michael get job for kenya he don become very popular . | since wey michael job land kenya im don popular well well . (pd) |
-| 9. di woman wey dey learn gymnastics just start dey waka with bristol student . (pd)| the woman 's gymnastics learn just to start walking with bristol student . | the woman that learned gymnastics just started to walk with bristol student . (en) |
+| 11. india space oga yarn say agency don come back kampe . (pd)| india 's space agency said it is coming back to be kampe .   | india space head has said the agency has returned stronger . (en) |
+| 12. since when michael job arrived kenya he has become very popular . (en) | since when michael get job for kenya he don become very popular . | since wey michael job land kenya im don popular well well . (pd) |
+| 13. di woman wey dey learn gymnastics just start dey waka with bristol student . (pd)| the woman 's gymnastics learn just to start walking with bristol student . | the woman that learned gymnastics just started to walk with bristol student . (en) |
                                                    
 **The Ugly**
 
 | Source (language ID)| Model Translation | Target (language ID)  |
 | --------------------------------------|:-----------------:| ---------------------:|
-| 10. as fishermen wey dem be dem see the whale . (pd) | as fishermen can be seen as the whale . | given that they are fishermen , they saw the whale . (en) |
-| 11. they have praised the mission that they arranged it . (en)| dem dey praised the mission say make dem arranged it . | dem don hail di mission say na dem package am . (pd) |
+| 14. as fishermen wey dem be dem see the whale . (pd) | as fishermen can be seen as the whale . | given that they are fishermen , they saw the whale . (en) |
+| 15. they have praised the mission that they arranged it . (en)| dem dey praised the mission say make dem arranged it . | dem don hail di mission say na dem package am . (pd) |
 
 
-As we can see, the language model helps with performing translations that are not necessarily word-for-word, but also grammatically correct as in translations 2 and 3. The model also corrects translations eg. changing to possessive forms as in translation 5.  
+As we can see, the language model helps with performing translations that are not necessarily word-for-word, but also grammatically correct as in translations 2, 3 and 8. The model also corrects translations eg. changing to possessive forms as in translation 5. 
+
+More example translations are in the [translations folder](./translations)
 
 ## Dependencies
 
