@@ -2,6 +2,8 @@
 
 This repository contains the implementation of an Unsupervised NMT model from West African Pidgin (Creole) to English without using a single parallel sentence during training. 
 
+Link to paper - [https://arxiv.org/abs/1912.03444](https://arxiv.org/abs/1912.03444) (Accepted at NeurIPS 2019 Workshop on Machine Learning for the Developing World)
+
 Key results: 
 
 1. The alignment of Pidgin word vectors with English word vectors which achieves a Nearest Neighbor accuracy of **0.1282**. Significantly better than a baseline of **0.0093** which is the probability of selecting the right nearest neighbor from the evaluation set of 108 pairs. This aligned vector will be helpful in the performance of various downstream tasks and transfer of models from English to Pidgin. 
